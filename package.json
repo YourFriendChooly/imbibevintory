@@ -1,0 +1,23 @@
+{
+  "name": "imbibevintory",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "babel-start": "babel-node $NODE_DEBUG_OPTION ./src/bin/www",
+    "build": "babel src -d lib",
+    "dist": "node ./dist/bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "body-parser": "~1.17.1",
+    "cheerio": "^0.22.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "morgan": "~1.8.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0"
+  }
+}
