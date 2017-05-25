@@ -6,17 +6,17 @@ This utility provides API endpoints that will scrape inventory counts using a pr
 Returned JSON objects can be configured by adding query parameters to your applications GET requests ( outlined below. )
 
 ## Usage
-After installing the package dependancies, begin the express server with  **npm start**. !!!(Needs update)!!!
+After installing package dependancies with `npm install`, begin the express server with  `npm dist`.
 This will allow you to connect to two api endpoints,
-localhost:3000/api_tbs_ and localhost:3000/api_lcbo_
+`localhost:3000/api/tbs` and `localhost:3000/api/lcbo`
 
 ### The Beer Store Inventory
 Retrieve Beer Store inventory counts for a specific store and brand ID by sending a GET request to
-yourserver:port_api_tbs**_STORE_****BRAND**/ (Where store is the location's store ID and brand is the brand ID of the product in question.)
+yourserver:port/api/tbs/:STORE/:BRAND/ (Where store is the location's store ID and brand is the brand ID of the product in question.)
 This will return a JSON object of inventory data in one of several configurable formats (see Configurable Options.)
 
 ### LCBO Inventory
-Retrieve LCBO Inventory for a product from all locations  by sending a GET request to yourserver:port_api_lcbo/brand. As this method will return all the LCBO locations and the current inventory count there are several configurable options to assist in delivering valuable and easy-to-parse information.
+Retrieve LCBO Inventory for a product from all locations by sending a GET request to yourserver:port/api/lcbo/:brand. As this method will return all the LCBO locations and the current inventory count there are several configurable options to assist in delivering valuable and easy-to-parse information.
 
 
 ## Configurable options
