@@ -5,7 +5,9 @@
   "scripts": {
     "babel-start": "babel-node $NODE_DEBUG_OPTION ./src/bin/www",
     "build": "babel src -d lib",
-    "dist": "node ./dist/bin/www"
+    "dist": "node ./dist/bin/www",
+    "start": "node ./dist/bin/www"
+
   },
   "dependencies": {
     "axios": "^0.16.1",
