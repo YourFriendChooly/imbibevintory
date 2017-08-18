@@ -14,15 +14,18 @@ router.get('/inv/:brand', (req, res) => {
         "catalogId": 10001,
         "langId": -1,
         "partNumber": partNumber,
-        "storeId": 10151
+        "storeId": 10151,
+        "ajax": true
     };
     axios.get(lcboInvUrl, {
         params: lcboInvParams,
         headers: {
             "cache-control": "no-cache",
             "upgrade-insecure-requests": "1",
-            "dnt": "1",
-            "host": "www.lcbo.com"
+            "DNT": "1",
+            "Host": "www.lcbo.com",
+            "X-Requested-With": "XMLHttpRequest",
+            "Connection": "keep-alive"
         }
     }).then((resp) => {
         new LcboParser(resp.data, params, (parsed) => {

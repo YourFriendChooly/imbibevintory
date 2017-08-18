@@ -1,5 +1,5 @@
+"use strict";
 import cheerio from 'cheerio';
-
 class lcboParser{
     constructor(html, params, responseHandler){
         const dataAggregationType = {
