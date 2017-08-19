@@ -28,9 +28,10 @@ router.get('/inv/:brand', (req, res) => {
             "Connection": "keep-alive"
         }
     }).then((resp) => {
-        new LcboParser(resp.data, params, (parsed) => {
+        let result = new LcboParser(resp.data, params, (parsed) => {
             res.send(parsed);
-        }).parseInventory();
+        });
+        result.parseInventory();
     }).catch((err) => {
         res.send(err);
     })
