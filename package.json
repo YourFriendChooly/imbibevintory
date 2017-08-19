@@ -6,7 +6,7 @@
     "babel-start": "babel-node $NODE_DEBUG_OPTION ./src/bin/www",
     "build": "babel src -d lib",
     "dist": "node ./dist/bin/www",
-    "start": "babel-node ./src/bin/www"
+    "start": "node ./lib/bin/www"
 
   },
   "dependencies": {
